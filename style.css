@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #fff;
+  background-color: #242526;
+  font-family: "Space Grotesk", serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+}
+
+.myphoto {
+  display: inline-block;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+}
+
+.head-navigation ul {
+  display: flex;
+  list-style: none;
+  font-size: 3rem;
+  gap: 8rem;
+}
+
+.head-navigation ul li:hover {
+  color: rgb(255, 95, 95);
+  cursor: pointer;
+}
+
+main h1 {
+  font-size: 4rem;
+}
+
+main {
+  padding: 4rem;
+}
+
+.wave {
+  font-size: 4rem;
+  display: inline-block;
+  animation: wave 3s infinite ease-in-out;
+  transform-origin: center;
+}
+
+.name-box {
+  display: flex;
+  gap: 4rem;
+}
+.name {
+  display: inline-block;
+  border-right: 5px solid white;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  letter-spacing: 0.8rem;
+  overflow: hidden;
+  animation: type 4s steps(24) infinite, cursor 0.8s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+.name:hover {
+  color: #ff5f5f;
+}
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%; /* Typing completes at 4 seconds (4/9 * 100%) */
+  }
+  100% {
+    width: 100%; /* Holds width for remaining duration to create pause */
+  }
+}
+
+.name__description {
+  font-size: 4rem;
+  color: #ff5f5f;
+  margin-bottom: 6rem;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.feature__box {
+  color: #cd5e5e;
+  width: 350px;
+  background-color: #303030;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  transition: all 0.3s; /* Added transition */
+}
+
+.feature__box h2 {
+  font-size: 1.8rem;
+}
+
+.feature__box p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.features__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature__box:hover {
+  transform: translateY(-3rem);
+}
